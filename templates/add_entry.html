@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Add Entry | HeartLog{% endblock %}
+{% block content %}
+    <h2>Add a New Entry</h2>
+    <form method="post">
+        <label>Description:<br>
+            <textarea name="description" required rows="3"></textarea>
+        </label>
+        <label>Love Language:<br>
+            <select name="love_language" required>
+                <option value="acts_of_service">Acts of Service</option>
+                <option value="quality_time">Quality Time</option>
+                <option value="receiving_gifts">Receiving Gifts</option>
+                <option value="words_of_affirmation">Words of Affirmation</option>
+                <option value="physical_touch">Physical Touch</option>
+                <option value="other">Other / Not Sure</option>
+            </select>
+        </label>
+        <button type="submit">Add Entry</button>
+    </form>
+{% endblock %}

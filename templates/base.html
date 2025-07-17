@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}HeartLog{% endblock %}</title>
+    <style>
+        body {
+            font-family: system-ui, Arial, sans-serif;
+            background: #23272e;
+            color: #f1f3f6;
+            margin: 0;
+            padding: 0 0 60px 0;
+        }
+        header {
+            background: #2c313a;
+            padding: 1em;
+            text-align: center;
+        }
+        nav {
+            background: #1a1c21;
+            padding: 0.5em 1em;
+            text-align: center;
+        }
+        nav a {
+            color: #7ccfff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 600px;
+            margin: 2em auto;
+            background: #2c313a;
+            border-radius: 10px;
+            padding: 2em;
+            box-shadow: 0 2px 12px #1117  ;
+        }
+        textarea, select, input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            margin-bottom: 16px;
+            border-radius: 5px;
+            border: 1px solid #555;
+            background: #23272e;
+            color: #f1f3f6;
+            resize: vertical;
+        }
+        button {
+            background: #7ccfff;
+            color: #23272e;
+            font-weight: bold;
+            padding: 10px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #4ec3fa;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 1.3em;
+            background: #24262b;
+            border-radius: 8px;
+            padding: 1em;
+        }
+        small {
+            color: #b6bbc5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HeartLog</h1>
+    </header>
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('add_entry') }}">Add Entry</a>
+        <a href="{{ url_for('history') }}">History</a>
+    </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

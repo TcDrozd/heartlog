@@ -9,10 +9,10 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 migrate = Migrate(app, db)
 
-# For now, just test app runs
-@app.route('/')
-def home():
-    return "Hello, HeartLog!"
+# Import routes *after* app/db are set up to avoid circular import
+from routes import *
+from api import api
+app.register_blueprint(api, url_prefix='/api')
 
 if __name__ == '__main__':
     app.run(debug=True)
