@@ -1,0 +1,37 @@
+Classify the following entry into one of these five categories, using the definitions below:
+
+- Acts of Service: Helpful actions done for someone else (e.g., chores, making coffee, helping with tasks).
+- Quality Time: Meaningful moments spent together, focused attention (e.g., date night, deep conversation).
+- Receiving Gifts: The act of giving or receiving a physical item or present, chosen with thought or care.
+- Words of Affirmation: Spoken or written words that express appreciation, affection, or encouragement.
+- Physical Touch: Affectionate or comforting physical contact (e.g., hug, hand-holding).
+
+Entry: "{entry}"
+
+Respond in JSON with two fields:
+- "category": the single best-matching category (must be exactly as written above)
+- "reasoning": a clear, 2–3 sentence explanation of why this entry fits that category
+
+Examples:
+{{
+  "category": "Receiving Gifts",
+  "reasoning": "Giving someone a new book as a present is receiving gifts. The value lies in the thought behind the item, not in the act of giving or doing something for them."
+}}
+{{
+  "category": "Acts of Service",
+  "reasoning": "Making dinner for someone is an act of service because it involves doing something helpful for them, not giving a physical gift."
+}}
+{{
+  "category": "Quality Time",
+  "reasoning": "Spending an evening talking and watching movies together is quality time. Both people are engaged and present, focusing on each other's company."
+}}
+{{
+  "category": "Words of Affirmation",
+  "reasoning": "Sending a heartfelt text message expressing appreciation is a form of words of affirmation. It uses kind and encouraging language to strengthen the relationship."
+}}
+{{
+  "category": "Physical Touch",
+  "reasoning": "A warm hug after a long day is an example of physical touch. Physical affection can provide comfort, reassurance, and a sense of closeness."
+}}
+
+Only output a single JSON object with the keys “category” and “reasoning”. Do not output a JSON string or wrap your response in quotes.

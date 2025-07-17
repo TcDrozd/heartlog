@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Confirm Entry | HeartLog{% endblock %}
+{% block content %}
+    <h2>Confirm Entry</h2>
+    <form method="post">
+        <p><strong>Description:</strong> {{ entry.description }}</p>
+        <p><strong>Suggested Category:</strong>
+            <select name="category">
+                <option value="{{ entry.category }}" selected>{{ entry.category }}</option>
+                <option value="Acts of Service">Acts of Service</option>
+                <option value="Quality Time">Quality Time</option>
+                <option value="Receiving Gifts">Receiving Gifts</option>
+                <option value="Words of Affirmation">Words of Affirmation</option>
+                <option value="Physical Touch">Physical Touch</option>
+            </select>
+        </p>
+        <p><strong>Reasoning:</strong> {{ entry.reasoning }}</p>
+        <button type="submit">Save Entry</button>
+        <a href="{{ url_for('add_entry') }}">Back</a>
+    </form>
+{% endblock %}
