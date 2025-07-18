@@ -34,4 +34,4 @@ Examples:
   "reasoning": "A warm hug after a long day is an example of physical touch. Physical affection can provide comfort, reassurance, and a sense of closeness."
 }}
 
-Only output a single JSON object with the keys “category” and “reasoning”. Do not output a JSON string or wrap your response in quotes.
+Only output a single JSON object with the keys “category” and “reasoning”. Do not include any extra strings or characters beyond your JSON formatted response.

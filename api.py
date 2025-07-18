@@ -31,7 +31,9 @@ def categorize_entry():
         ollama_response = requests.post(ollama_url, json=ollama_payload, timeout=10)
         ollama_response.raise_for_status()
         ollama_json = ollama_response.json()
+        print(f"Ollama response: {ollama_json}")
         response_str = ollama_json.get("response", "")
+        print(response_str)
 
         # Parse the string in "response" into a dict
         import json
