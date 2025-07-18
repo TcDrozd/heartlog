@@ -17,4 +17,4 @@ app.register_blueprint(api, url_prefix='/api')
 from routes import *
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5050) # to avoid airplay conflicts at port 5000
+    app.run(debug=True, port=5050, host="0.0.0.0")
